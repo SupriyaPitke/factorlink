@@ -1,0 +1,1568 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Application>
+
+  <Header>
+    <Version val="13030.00"/>
+    <WithIsn val="Y"/>
+    <_InternalTask val="N"/>
+    <IsRoot val="N"/>
+    <InIndex val="N"/>
+    <UniqueISNConvState val="12"/>
+  </Header>
+
+  <ProgramsRepository>
+    <Programs>
+      <Task MainProgram="N">
+        <Header Description="BDC004B=HandleSolvedDisputes" ISN_2="1" LastIsn="1" id="609">
+          <Public val="BDC004_002"/>
+          <ExecutionRight comp="-1"/>
+          <Resident val="N"/>
+          <SQL val="N"/>
+          <ReturnValue>
+            <ReturnValueAttr/>
+            <TSK_PARAMS val="1"/>
+            <ParametersAttributes>
+              <Attr MgAttr="B"/>
+            </ParametersAttributes>
+          </ReturnValue>
+          <SqlWhereExist val="N"/>
+          <TaskType val="B"/>
+          <External val="N"/>
+          <Offline val="N"/>
+          <FormType val="N"/>
+          <DotNetObjectExists val="N"/>
+          <LastModified _date="734982" _time="53238" date="24/04/2013" time="14:47:18"/>
+        </Header>
+        <ItemIsn val="7"/>
+        <Resource>
+          <DB id="1">
+            <DataObject comp="-1" obj="303"/>
+            <Access val="W"/>
+            <Share val="W"/>
+            <Open val="N"/>
+            <Cache val="N"/>
+            <IdentifyRowModifications val="84"/>
+          </DB>
+          <DB id="2">
+            <DataObject comp="-1" obj="545"/>
+            <Access val="R"/>
+            <Share val="W"/>
+            <Open val="N"/>
+            <Cache val="N"/>
+            <IdentifyRowModifications val="84"/>
+          </DB>
+          <Columns>
+            <Column id="1" name="p.DifferentInvoicesChanged">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_LOGICAL" id="1"/>
+                <StoredAs id="173"/>
+                <DbColumnName id="178"/>
+                <UserType id="180"/>
+              </PropertyList>
+            </Column>
+          </Columns>
+        </Resource>
+        <Information>
+          <Key>
+            <Column val="2"/>
+            <Mode val="N"/>
+          </Key>
+          <DB comp="-1" obj="545"/>
+          <Sort>
+            <CLS val="A"/>
+          </Sort>
+          <ForceRecordDelete DEL="N"/>
+          <EndTaskCondition val="N"/>
+          <EvaluateEndCondition val="B"/>
+          <InitialMode val="M"/>
+          <Locate Direction="A"/>
+          <Range Direction="A"/>
+          <VarRange LastIsn="5"/>
+          <TaskProperties>
+            <SelectionTable val="N"/>
+            <ConfirmUpdate CNFU="N"/>
+            <ConfirmCancel val="N"/>
+            <ErrorStrategy val="A"/>
+            <LockingStrategy val="I"/>
+            <CacheStrategy val="T"/>
+            <ForceRecordSuffix val="N"/>
+            <TransactionMode val="P"/>
+            <TransactionBegin val="T"/>
+            <PreloadView val="N"/>
+            <AllowEmptyDataview val="N"/>
+            <KeepCreatedContext val="N"/>
+          </TaskProperties>
+          <SIDE_WIN>
+            <AllowOptions val="N"/>
+            <AllowQuery val="Y"/>
+            <AllowModify val="Y"/>
+            <AllowCreate val="Y"/>
+            <AllowDelete val="Y"/>
+            <AllowLocate val="Y"/>
+            <AllowRange val="Y"/>
+            <AllowIndexChange val="Y"/>
+            <AllowSorting val="Y"/>
+            <AllowIOFiles val="Y"/>
+            <RecordCycle val="Y"/>
+            <AllowEvents val="N"/>
+            <AllowIndexOptimization val="Y"/>
+            <AllowLocationInQuery val="Y"/>
+            <AllowPrintingData val="N"/>
+          </SIDE_WIN>
+          <WIN>
+            <OpenTaskWindow val="N"/>
+            <CloseTaskWindow val="N"/>
+            <ForegroundWindow val="Y"/>
+            <FlipFld val="N"/>
+            <RefreshTaskWindow ReturnValue="N"/>
+          </WIN>
+          <BOX>
+            <Direction val="V"/>
+          </BOX>
+        </Information>
+        <TaskLogic>
+          <LogicUnit id="2" propagate="78">
+            <Level val="R"/>
+            <Type val="M"/>
+            <Scope val="S"/>
+            <EngineDirective val="S"/>
+            <ShowMessage val="Y"/>
+            <Condition val="89"/>
+            <Event>
+              <EventType val="S"/>
+              <PublicObject comp="-1"/>
+            </Event>
+            <Expanded val="1"/>
+            <LogicLines>
+              <LogicLine>
+                <DATAVIEW_SRC FlowIsn="2" IDX="2" Type="M">
+                  <Condition val="N"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </DATAVIEW_SRC>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="1" FlowIsn="3" id="1">
+                  <Column val="1"/>
+                  <Type val="V"/>
+                  <IsParameter val="Y"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Remark FlowIsn="4">
+                  <Type val="0"/>
+                  <Text val=" "/>
+                </Remark>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="2" FlowIsn="5" id="2">
+                  <Column val="3"/>
+                  <Type val="R"/>
+                  <IsParameter val="N"/>
+                  <Range MAX="3" MIN="3"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="3" FlowIsn="6" id="3">
+                  <Column val="1"/>
+                  <Type val="R"/>
+                  <IsParameter val="N"/>
+                  <Range MAX="5" MIN="5"/>
+                  <_DitIndexForToolkit val="16"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="4" FlowIsn="7" id="4">
+                  <Column val="2"/>
+                  <Type val="R"/>
+                  <IsParameter val="N"/>
+                  <INT_RCMP_INFO>
+                    <v>10</v>
+                  </INT_RCMP_INFO>
+                  <_DitIndexForToolkit val="18"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="5" FlowIsn="8" id="5">
+                  <Column val="7"/>
+                  <Type val="R"/>
+                  <IsParameter val="N"/>
+                  <Range MIN="4"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Remark FlowIsn="9">
+                  <Type val="0"/>
+                  <Text val=" "/>
+                </Remark>
+              </LogicLine>
+              <LogicLine>
+                <LNK Direction="A" EVL_CND="R" FlowIsn="10" Key="1" Mode="R" SortType="13" VIEW="6" VIEWS="2">
+                  <DB comp="-1" obj="303"/>
+                  <Expanded val="1"/>
+                  <Condition val="Y"/>
+                </LNK>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="6" FlowIsn="11" id="6">
+                  <Column val="1"/>
+                  <Type val="R"/>
+                  <IsParameter val="N"/>
+                  <Locate MAX="2" MIN="2"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="7" FlowIsn="12" id="7">
+                  <Column val="61"/>
+                  <Type val="R"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <END_LINK FlowIsn="13"/>
+              </LogicLine>
+            </LogicLines>
+          </LogicUnit>
+          <LogicUnit id="3" propagate="78">
+            <Level val="T"/>
+            <Type val="P"/>
+            <Scope val="S"/>
+            <EngineDirective val="S"/>
+            <ShowMessage val="Y"/>
+            <Condition val="89"/>
+            <Event>
+              <EventType val="S"/>
+              <PublicObject comp="-1"/>
+            </Event>
+            <Expanded val="1"/>
+            <LogicLines>
+              <LogicLine>
+                <BLOCK EndBlock="22" EndBlockSegment="22" FlowIsn="14" Type="I">
+                  <Condition val="N"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </BLOCK>
+              </LogicLine>
+              <LogicLine>
+                <Remark FlowIsn="15">
+                  <Type val="2"/>
+                  <Text val="Author: Juergen Paarmann"/>
+                </Remark>
+              </LogicLine>
+              <LogicLine>
+                <Remark FlowIsn="16">
+                  <Type val="2"/>
+                  <Text val="Created: 18/09/2002"/>
+                </Remark>
+              </LogicLine>
+              <LogicLine>
+                <Remark FlowIsn="17">
+                  <Type val="2"/>
+                  <Text val=" "/>
+                </Remark>
+              </LogicLine>
+              <LogicLine>
+                <Remark FlowIsn="18">
+                  <Type val="2"/>
+                  <Text val="24.04.2013 JH SCR18105 Removed external flag"/>
+                </Remark>
+              </LogicLine>
+              <LogicLine>
+                <Remark FlowIsn="19">
+                  <Type val="2"/>
+                  <Text val="01-09-2004 JP SCR #6923 add update on INVO_IDSP_NO"/>
+                </Remark>
+              </LogicLine>
+              <LogicLine>
+                <Remark FlowIsn="20">
+                  <Type val="2"/>
+                  <Text val="30-04-2003 JP SCR #3385+3397 change handling for different invoices marked"/>
+                </Remark>
+              </LogicLine>
+              <LogicLine>
+                <Remark FlowIsn="21">
+                  <Type val="2"/>
+                  <Text val="03-03-2003 JP SCR #3010 implement handling of only one invoice"/>
+                </Remark>
+              </LogicLine>
+              <LogicLine>
+                <END_BLK FlowIsn="22"/>
+              </LogicLine>
+            </LogicLines>
+          </LogicUnit>
+          <LogicUnit id="4" propagate="78">
+            <Level val="R"/>
+            <Type val="S"/>
+            <Scope val="S"/>
+            <EngineDirective val="S"/>
+            <ShowMessage val="Y"/>
+            <Condition val="89"/>
+            <Event>
+              <EventType val="S"/>
+              <PublicObject comp="-1"/>
+            </Event>
+            <Expanded val="1"/>
+            <LogicLines>
+              <LogicLine>
+                <CallTask FlowIsn="23">
+                  <OperationType val="P"/>
+                  <TaskID comp="-1" obj="797"/>
+                  <Lock val="Y"/>
+                  <Arguments>
+                    <Argument>
+                      <Expression val="2"/>
+                      <Skip val="N"/>
+                    </Argument>
+                  </Arguments>
+                  <Wait val="Y"/>
+                  <SyncData val="N"/>
+                  <RetainFocus val="N"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </CallTask>
+              </LogicLine>
+              <LogicLine>
+                <Update FlowIsn="24">
+                  <FieldID val="7"/>
+                  <WithValue val="1"/>
+                  <Incremental val="N"/>
+                  <ForcedUpdate val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Update>
+              </LogicLine>
+            </LogicLines>
+          </LogicUnit>
+        </TaskLogic>
+        <TaskForms>
+          <FormEntry _last_isn="72" _last_test_id="6197" id="2">
+            <PropertyList model="FORM_GUI0">
+              <Height id="24" val="276"/>
+              <Font id="50" val="111"/>
+              <Color id="51" val="111"/>
+              <_Comment id="218"/>
+              <FormName id="311" valUnicode="BDC004B=HandleSolvedDisputes"/>
+              <_TabbingOrder id="318" val="1"/>
+              <WindowType id="358" val="1"/>
+              <PersistentFormState id="493"/>
+            </PropertyList>
+            <Control _test_id="1" id="1">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="p.All_INVO_MARKCODESPEC:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="8"/>
+                <Width id="23" val="134"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="3" id="2">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="p.All_INVO_MARKCODETEXT:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="24"/>
+                <Width id="23" val="134"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="5" id="3">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="p.All_INVO_CODELASTDUNNINGLETTE:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="40"/>
+                <Width id="23" val="174"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="7" id="4">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="p.All_INVO_DUNNINGSTOP:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="56"/>
+                <Width id="23" val="126"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="9" id="5">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="p.All_INVO_NETDAYS:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="72"/>
+                <Width id="23" val="103"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="11" id="6">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="p.All_INVO_VALUEDAYS:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="88"/>
+                <Width id="23" val="115"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="13" id="7">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="p.All_TERMCODE:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="104"/>
+                <Width id="23" val="84"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="15" id="8">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="p.Use_INVO_MARKCODESPEC:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="120"/>
+                <Width id="23" val="140"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="17" id="9">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="p.Use_INVO_MARKCODETEXT:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="136"/>
+                <Width id="23" val="140"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="19" id="10">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="p.Use_INVO_CODELASTDUNNINGLETT:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="152"/>
+                <Width id="23" val="175"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="21" id="11">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="p.Use_INVO_DUNNINGSTOP:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="168"/>
+                <Width id="23" val="132"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="23" id="12">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="p.Use_INVO_NETDAYS:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="184"/>
+                <Width id="23" val="108"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="25" id="13">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="p.Use_INVO_VALUEDAYS:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="200"/>
+                <Width id="23" val="120"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="27" id="14">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="p.Use_TERMCODE:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="216"/>
+                <Width id="23" val="89"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="29" id="15">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="TEMP_USER_ID:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="232"/>
+                <Width id="23" val="80"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="30" id="16">
+              <PropertyList model="CTRL_GUI0_EDIT">
+                <Model ID="MODEL_GUI_INT" id="1">
+                  <Var FieldID="3"/>
+                </Model>
+                <X id="21" val="192"/>
+                <Y id="22" val="232"/>
+                <Width id="23" val="55"/>
+                <Height id="24" val="10"/>
+                <Data FieldID="3" id="43"/>
+                <Color id="51" val="12"/>
+                <Visible id="61"/>
+                <_Orientation id="143"/>
+                <TabOrder id="314" val="1"/>
+                <AllowParking id="315" val="Y"/>
+                <AllowedDirection id="317" val="1"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="31" id="17">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="TEMP_INVO_NO:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="248"/>
+                <Width id="23" val="80"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control PDOD="1" _test_id="32" id="18">
+              <PropertyList model="CTRL_GUI0_EDIT">
+                <Model ID="MODEL_GUI_INT" id="1">
+                  <Var FieldID="4"/>
+                </Model>
+                <X id="21" val="192"/>
+                <Y id="22" val="248"/>
+                <Width id="23" val="65"/>
+                <Height id="24" val="10"/>
+                <Data FieldID="4" id="43"/>
+                <Color id="51" val="12"/>
+                <Visible id="61"/>
+                <_Orientation id="143"/>
+                <TabOrder id="314" val="2"/>
+                <AllowParking id="315" val="Y"/>
+                <AllowedDirection id="317" val="1"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="33" id="19">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="TEMP_INVO_MARKCODESPEC:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="264"/>
+                <Width id="23" val="139"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="35" id="20">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="TEMP_INVO_MARKCODETEXT:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="280"/>
+                <Width id="23" val="139"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="37" id="21">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="TEMP_INVO_CODELASTDUNNINGLETTER:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="296"/>
+                <Width id="23" val="185"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="39" id="22">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="TEMP_INVO_DUNNINGSTOP:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="312"/>
+                <Width id="23" val="131"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="41" id="23">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="TEMP_INVO_NETDAYS:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="328"/>
+                <Width id="23" val="108"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="43" id="24">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="TEMP_INVO_VALUEDAYS:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="344"/>
+                <Width id="23" val="120"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="45" id="25">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="TEMP_TRMC_CODE:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="360"/>
+                <Width id="23" val="95"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="47" id="26">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="v.Days:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="376"/>
+                <Width id="23" val="41"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="49" id="27">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="INVO_NO:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="392"/>
+                <Width id="23" val="50"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="51" id="28">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="INVO_ADMNO:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="408"/>
+                <Width id="23" val="71"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="53" id="29">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="INVO_CLNTNO:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="424"/>
+                <Width id="23" val="72"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="55" id="30">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="INVO_DEBC_NO:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="440"/>
+                <Width id="23" val="78"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="57" id="31">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="INVO_INVDATE:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="456"/>
+                <Width id="23" val="76"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="59" id="32">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="INVO_VALUEDATE:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="472"/>
+                <Width id="23" val="89"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="61" id="33">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="INVO_DUEDATE:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="488"/>
+                <Width id="23" val="79"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="63" id="34">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="INVO_MARKCODESPEC:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="504"/>
+                <Width id="23" val="109"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="65" id="35">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="INVO_MARKCODETEXT:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="520"/>
+                <Width id="23" val="109"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="67" id="36">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="INVO_POSSIBLEBUYINGDATE:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="536"/>
+                <Width id="23" val="137"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="69" id="37">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="INVO_MAXFINANCETIMPASSED:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="552"/>
+                <Width id="23" val="147"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="71" id="38">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="INVO_NETDAYS:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="568"/>
+                <Width id="23" val="78"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="73" id="39">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="INVO_VALUEDAYS:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="584"/>
+                <Width id="23" val="90"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="75" id="40">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="INVO_DISCOUNT1PERC:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="600"/>
+                <Width id="23" val="112"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="77" id="41">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="INVO_DISCOUNT1DAYS:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="616"/>
+                <Width id="23" val="113"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="79" id="42">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="INVO_DISCOUNT2PERC:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="632"/>
+                <Width id="23" val="112"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="81" id="43">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="INVO_DISCOUNT2DAYS:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="648"/>
+                <Width id="23" val="113"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="83" id="44">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="INVO_DISCOUNT3PERC:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="664"/>
+                <Width id="23" val="112"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="85" id="45">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="INVO_DISCOUNT3DAYS:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="680"/>
+                <Width id="23" val="113"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="87" id="46">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="INVO_EOM:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="696"/>
+                <Width id="23" val="57"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="89" id="47">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="INVO_EXTRADAYS:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="712"/>
+                <Width id="23" val="91"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="91" id="48">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="INVO_TRANSFERDAY:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="728"/>
+                <Width id="23" val="102"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="93" id="49">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="INVO_CODLASTDUNNINGLETTER:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="744"/>
+                <Width id="23" val="151"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="95" id="50">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="INVO_DUNNINGSTOP:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="760"/>
+                <Width id="23" val="101"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="97" id="51">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="TRMC_CODE:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="776"/>
+                <Width id="23" val="65"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="99" id="52">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="TRMC_DISCOUNT1PERC:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="792"/>
+                <Width id="23" val="116"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="101" id="53">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="TRMC_DISCOUNT1DAYS:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="808"/>
+                <Width id="23" val="117"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="103" id="54">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="TRMC_DISCOUNT2PERC:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="824"/>
+                <Width id="23" val="116"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="105" id="55">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="TRMC_DISCOUNT2DAYS:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="840"/>
+                <Width id="23" val="117"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="107" id="56">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="TRMC_DISCOUNT3PERC:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="856"/>
+                <Width id="23" val="116"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="109" id="57">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="TRMC_DISCOUNT3DAYS:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="872"/>
+                <Width id="23" val="117"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="111" id="58">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="TRMC_EOM:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="888"/>
+                <Width id="23" val="61"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="113" id="59">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="TRMC_EXTRADAYS:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="904"/>
+                <Width id="23" val="95"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="115" id="60">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="TRMC_TRANSFERDAY:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="920"/>
+                <Width id="23" val="106"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="117" id="61">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="TRMC_NETPAYMENTDAYS:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="936"/>
+                <Width id="23" val="124"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="119" id="62">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="TRMC_VALUEDAYS:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="952"/>
+                <Width id="23" val="94"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="121" id="63">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="CLNT101_ADMNO:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="968"/>
+                <Width id="23" val="88"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="123" id="64">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="CLNT102_CLNTNO:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="984"/>
+                <Width id="23" val="88"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="125" id="65">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="CLNT407_WITHOUTRECOURSE:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="1000"/>
+                <Width id="23" val="144"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="127" id="66">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="CLNT407_WITHRECOURSE:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="1016"/>
+                <Width id="23" val="126"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="129" id="67">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="CLNT409_MAXPAYMENTDAYS:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="1032"/>
+                <Width id="23" val="140"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="131" id="68">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="DEBC_NO:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="1048"/>
+                <Width id="23" val="51"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="133" id="69">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="DEBC_MAXFINTIMEAFTERDUEDATE:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="1064"/>
+                <Width id="23" val="164"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="135" id="70">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="GNRL_CODE:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="1080"/>
+                <Width id="23" val="63"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="137" id="71">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="GNRL_INVOICEBUYING:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="1096"/>
+                <Width id="23" val="109"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="139" id="72">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="GNRL_MARKCODMAXPAYMENTDAYS:"/>
+                <X id="21" val="4"/>
+                <Y id="22" val="1112"/>
+                <Width id="23" val="170"/>
+                <Height id="24" val="8"/>
+                <Font id="50" val="114"/>
+                <Color id="51" val="111"/>
+                <Visible id="61"/>
+                <Style id="63" val="7"/>
+                <_VerticalScroll id="73"/>
+                <LineWidth id="76"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+          </FormEntry>
+        </TaskForms>
+        <Expressions>
+          <Expression id="1">
+            <ExpSyntax val="0"/>
+            <ExpAttribute val="N"/>
+          </Expression>
+          <Expression id="2">
+            <ExpSyntax val="{0,4}"/>
+            <ExpAttribute val="N"/>
+          </Expression>
+          <Expression id="3">
+            <ExpSyntax val="'TRUE'LOG"/>
+            <ExpAttribute val="B"/>
+          </Expression>
+          <Expression id="4">
+            <ExpSyntax val="CndRange ({0,1},1)"/>
+            <ExpAttribute val="N"/>
+          </Expression>
+          <Expression id="5">
+            <ExpSyntax val="User (0)&amp;'ODC005C'"/>
+            <ExpAttribute val="A"/>
+          </Expression>
+        </Expressions>
+        <VarRangeInfo Mode="F" VarRangeVeeIsn="2" id="1"/>
+        <VarRangeInfo Mode="T" VarRangeVeeIsn="2" id="2"/>
+        <VarRangeInfo Mode="F" VarRangeVeeIsn="3" id="3"/>
+        <VarRangeInfo Mode="T" VarRangeVeeIsn="3" id="4"/>
+        <VarRangeInfo Mode="F" VarRangeVeeIsn="5" id="5"/>
+      </Task>
+    </Programs>
+  </ProgramsRepository>
+
+</Application>
